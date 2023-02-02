@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "running git hooks"
+
+source .githooks/scripts/colors.sh
+source .githooks/scripts/linting.sh
+
+exit 0;

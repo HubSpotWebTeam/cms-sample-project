@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "running git hooks"
+
+source .githooks/scripts/colors.sh
+source .githooks/scripts/linting.sh
+source .githooks/scripts/unit-testing.sh
+x=$?
+
+if [ $x -ne 0 ]; then
+  echo "${RED}Aborting push${ENDCOLOR}"
+  exit 1
+fi
+
+exit 0;

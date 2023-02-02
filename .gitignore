@@ -1,0 +1,41 @@
+# build output
+/dist
+/tmp
+/out-tsc
+node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Misc
+hubspot.config*
+.cms-cache
+.env.local
+!.env*.sample
+.results/
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+*.pem
+*.tgz
+*.log
+log/
+
+# System Files
+.DS_Store
+Thumbs.db
