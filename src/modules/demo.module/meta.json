@@ -1,0 +1,19 @@
+{
+  "css_assets" : [],
+  "js_assets": [],
+  "label": "Demo Module",
+  "external_js": [],
+  "global": false,
+  "help_text": "",
+  "host_template_types": ["PAGE"],
+  "is_available_for_new_content": true,
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [],
+  "css_render_options": {
+    "async": false
+  },
+  "js_render_options": {
+    "defer": true
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "extends": "./node_modules/@hs-web-team/eslint-config-browser/.stylelintrc.json",
+  "ignoreFiles": [
+    "./dist/**/*.{css,scss,sass}"
+  ]
+}
