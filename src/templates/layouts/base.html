@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page_meta.html_title }}</title>
+    {% if site_settings.favicon_src %}
+      <link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />
+    {% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}" />
+
+    {{ standard_header_includes }}
+
+    {% block styles %} {% endblock %}
+  </head>
+  <body>
+    <div class="body-container-wrapper {{ builtin_body_classes }}">
+      <div class="body-container container-fluid">
+          {% global_partial path="../partials/header.html" %}
+          {% block content %}{% endblock %}
+      </div>
+    </div>
+
+    {{ standard_footer_includes|replace('<script src="https://static.hsappstatic.net/jquery-libs/static-1.1/jquery/jquery-1.7.1.js"></script>','') }}
+    {% block scripts %} {% endblock %}
+  </body>
+</html>

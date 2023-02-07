@@ -1,0 +1,18 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Example Home Page
+-->
+{% extends "./layouts/base.html" %}
+
+{% block styles %}
+  {{ require_css(get_asset_url('/website/assets/shared.css')) }}
+{% endblock %}
+
+{% block scripts %}
+  {{ require_css(get_asset_url('/website/assets/shared.js')) }}
+{% endblock %}
+
+{% block content %}
+  {% module "page_header" path="/_Web Team Assets/apps/page/low-touch-recommendation/modules/page-header", label="Page Header" %}
+{% endblock %}

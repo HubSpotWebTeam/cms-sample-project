@@ -21,6 +21,7 @@ node_modules
 # Misc
 hubspot.config*
 .cms-cache
+.env
 .env.local
 !.env*.sample
 .results/

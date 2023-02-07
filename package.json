@@ -5,16 +5,16 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js --mode development",
-    "build": "webpack --config webpack.config.js --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "start": "webpack --watch --config=webpack.config.js --mode=development",
+    "build:dev": "npm run clean && webpack --config=webpack.config.js --mode=development",
+    "build:prod": "npm run clean && webpack --config=webpack.config.js --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "lint:js": "eslint src",
-    "lint:css": "stylelint src/**/*.css",
+    "lint:css": "stylelint src/**/*.css --allow-empty-input",
     "lint:all": "npm run lint:js && npm run lint:css",
     "prepare": "git config --local core.hooksPath .githooks || echo 'Failed to set git hooks'"
-
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,17 @@
   },
   "homepage": "https://github.com/HubSpotWebTeam/cms-sample-project#readme",
   "dependencies": {
+    "babel-loader": "^9.1.2",
     "cross-env": "^7.0.3",
-    "webpack": "^5.75.0"
+    "webpack": "^5.75.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "@hs-web-team/eslint-config-browser": "^0.4.0",
+    "css-loader": "^6.7.3",
+    "eslint-plugin-jsdoc": "^39.8.0",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0",
+    "webpack-cli": "^5.0.1"
   }
 }
