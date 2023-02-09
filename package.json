@@ -8,8 +8,8 @@
   "scripts": {
     "clean": "rm -rf dist",
     "start": "webpack --watch --config=webpack.config.js --mode=development",
-    "build:dev": "npm run clean && webpack --config=webpack.config.js --mode=development",
-    "build:prod": "npm run clean && webpack --config=webpack.config.js --mode=production",
+    "deploy:qa": "npm run clean && webpack --config=webpack.config.js --mode=qa",
+    "deploy:prod": "npm run clean && webpack --config=webpack.config.js --mode=production",
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint:js": "eslint src",
     "lint:css": "stylelint src/**/*.css --allow-empty-input",
