@@ -4,6 +4,7 @@ const path = require('path');
 
 const modes = {
   DEVELOPMENT: 'development',
+  QA: 'qa',
   PRODUCTION: 'production',
 };
 
@@ -24,6 +25,17 @@ module.exports = (_, args) => {
     return merge(devConfig, customConfig);
   }
 
+  if (args.mode === modes.QA) {
+    const prodConfig = cmsConfig({
+      projectFolder: path.resolve(__dirname),
+      portal: 'QA',
+      cmsSrc: 'dist',
+      cmsDest: 'sample-site',
+    });
+
+    return merge(prodConfig, customConfig);
+  }
+
   if (args.mode === modes.PRODUCTION) {
     const prodConfig = cmsConfig({
       projectFolder: path.resolve(__dirname),
@@ -36,4 +48,4 @@ module.exports = (_, args) => {
   }
 
   throw new Error('Error: no webpack mode specified.');
-}
+};
